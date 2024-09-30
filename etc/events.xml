@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <!-- Use global area to prevent order place via API\adminhtml -->
+    <event name="sales_model_service_quote_submit_before">
+        <observer name="Vendor_Test::vendor_test_check_dependency_before_order+place"
+                  instance="Vendor\Test\Observer\PlaceOrderDependencyCheckObserver"/>
+    </event>
+
+</config>

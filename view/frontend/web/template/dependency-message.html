@@ -1,0 +1,21 @@
+<div id="dependency-message" data-bind="scope: 'section'">
+    <!-- ko if: hasDependencyMessageCart -->
+    <div class="messages" style="display: none" data-bind="visible: hasDependencyMessageCart">
+        <div class="message notice" data-bind="html: dependencyMessageCart"></div>
+    </div>
+    <!-- /ko -->
+</div>
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "section": {
+                        "component": "Vendor_Test/js/dependency-message"
+                    }
+                }
+            }
+        }
+    }
+</script>

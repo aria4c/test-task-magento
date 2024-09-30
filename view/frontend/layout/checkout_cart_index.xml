@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="content">
+            <!-- Use same .phtml and .html to be able to adjust styles-->
+            <block class="Magento\Framework\View\Element\Template" name="dependency.message"
+                   template="Vendor_Test::dependency-message.phtml"
+                   ifconfig="product_dependency/general/enabled"
+                   before="checkout.cart"/>
+        </referenceBlock>
+    </body>
+</page>
